@@ -24,13 +24,13 @@
         </div>
         <form method="POST">
             <label for="title">Titre</label>
-            <input type="text" id="title" name="title" value="">
+            <input type="text" id="title" name="title" value="" placeholder="Entrez le titre du film">
     
             <label for="synopsis">Synopsis</label>
-            <textarea name="synopsis" id="synopsis" cols="30" rows="10"></textarea>
+            <textarea name="synopsis" id="synopsis" cols="30" rows="10" placeholder="Entrez le synopsis"></textarea>
     
             <label for="thumbnail">Affiche</label>
-            <input type="text" id="thumbnail" name="thumbnail" value="">
+            <input type="text" id="thumbnail" name="thumbnail" value="" placeholder="Entrez l'url de l'affiche du film">
     
             <label for="category">Category</label>
             <select name="category" id="category">
