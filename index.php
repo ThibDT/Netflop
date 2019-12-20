@@ -91,6 +91,41 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                     </div>
                 </div>
+                <div>
+                    <img src="https://picsum.photos/id/78/1280/800" alt="Test thumbnail">
+                    <div class="content">
+                        <h3>Test</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/78/1280/800" alt="Test thumbnail">
+                    <div class="content">
+                        <h3>Test</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/78/1280/800" alt="Test thumbnail">
+                    <div class="content">
+                        <h3>Test</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/78/1280/800" alt="Test thumbnail">
+                    <div class="content">
+                        <h3>Test</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://picsum.photos/id/78/1280/800" alt="Test thumbnail">
+                    <div class="content">
+                        <h3>Test</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="series" class="category">

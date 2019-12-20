@@ -9,8 +9,19 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/" class="logo">< Retour au site</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main id="admin">
-        <h1>Edition</h1>
+        <div class="heading-container">
+            <h1>Edition</h1>
+        </div>
         <form method="POST">
             <label for="title">Titre</label>
             <input type="text" id="title" name="title" value="">

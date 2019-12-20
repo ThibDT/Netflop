@@ -50,6 +50,7 @@ nav ul li a {
 
 main {
     padding-bottom: 10rem;
+    overflow: hidden;
 }
 
 #highlight {
@@ -117,24 +118,39 @@ main > div:nth-of-type(2) {
 
 .category h2 {
     font-size: 1.2rem;
+    z-index: -99;
 }
 .category .container {
     display: flex;
     width: 100%;
-    overflow: hidden;
     align-items: center;
+}
+.category .container:hover > div {
+    transform: translateX(-16.66%);
+}
+.category .container:hover > div:hover ~ div {
+    transform: translateX(16.66%);
 }
 .category .container > div {
     position: relative;
-    width: 175px;
+    width: 20%;
     margin: 0 1px;
     flex-shrink: 0;
-    cursor: default;
+    cursor: pointer;
+    transition-duration: .25s;
+    /* z-index: 999; */
 }
 
 .category .container > div:hover {
-    flex-grow: .1;
-    height: 150%;
+    transform: scale(1.33);
+}
+
+.category .container > div:first-of-type:hover {
+    transform: translateX(16.66%) scale(1.33);
+    z-index: 999;
+}
+.category .container > div:first-of-type:hover ~ div {
+    transform: translateX(33.33%);
 }
 
 .category .container > div img {
@@ -151,6 +167,8 @@ main > div:nth-of-type(2) {
     top: 0;
     left: 0;
     margin: 0;
+    height: 54px;
+    transition: height .25s;
 }
 
 .category .container > div .content h3,
@@ -161,17 +179,22 @@ main > div:nth-of-type(2) {
     text-align: center;
 }
 .category .container > div .content p {
-    display: none;
+    opacity: 0;
     text-align: justify;
-    padding: .5rem;
-    margin-top: .5rem;
     font-size: .75rem;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    transition-delay: 0;
 }
 .category .container > div:hover .content {
     height: 100%;
 }
 .category .container > div:hover .content p {
-    display: block;
+    transition: opacity .5s .3s;
+    opacity: 1;
+    padding: .5rem;
+    height: initial;
 }
 
 #admin {
@@ -183,6 +206,7 @@ main > div:nth-of-type(2) {
 }
 
 #admin .heading-container {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -199,9 +223,14 @@ main > div:nth-of-type(2) {
     line-height: 1.5;
     border-radius: .25rem;
     color:#fff;
-    background-color:#007bff;
-    border-color:#007bff;
+    background-color:#f60;
+    border-color:rgb(209, 84, 0);
     font-size: 2rem;
+    transition: background-color .25s;
+}
+
+#admin .heading-container a:hover {
+    background-color: rgb(209, 84, 0);
 }
 
 #admin ul {
@@ -223,23 +252,32 @@ main > div:nth-of-type(2) {
 }
 
 #admin ul li:hover .description {
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+#admin ul li .description i {
+    transition: opacity .1s;
+    font-size: 5rem;
+}
+
+#admin ul li:hover .description h2 {
+    width: 0;
+    transition: opacity .5s;
+}
+#admin ul li .description h2 {
+    transition: opacity .5s .1s;
+}
 
 #admin ul li .description i,
 #admin ul li:hover .description h2 {
-    display: none;
+    opacity: 0;
 }
 
 #admin ul li:hover .description i {
-    display: block;
-    font-size: 5rem;
+    opacity: 1;
 }
 
 #admin ul li .description {
@@ -249,8 +287,10 @@ main > div:nth-of-type(2) {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 75px;
     background-color: rgba(31, 31, 31, .75);
     text-align: center;
+    transition: height .25s;
 }
 
 #admin ul li a {
@@ -262,30 +302,45 @@ main > div:nth-of-type(2) {
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
-    /* background-color: rgba(255, 255, 255, 0.25); */
     padding: 2rem;
     border-radius: 7px;
+    max-width: 800px;
+    box-shadow: 0 0 7px #f60;
 }
 
 #admin form label {
     margin-top: 1rem;
+    font-weight: bold;
+    color: #f60;
 }
 
 #admin form input,
 #admin form textarea,
 #admin form select {
+    margin-top: .5rem;
     display: block;
     width: 100%;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
+    background-color: transparent;
+    color: #fff;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
+    border: 0;
+    border-bottom: 1px dashed #fff;
 }
+
 
 #admin form input[type="submit"] {
     margin-top: 1rem;
+    background-color: #f60;
+    border-color: rgb(209, 84, 0);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .25s;
+}
+
+#admin form input[type="submit"]:hover {
+    background-color: rgb(209, 84, 0);
 }
