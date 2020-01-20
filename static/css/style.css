@@ -145,11 +145,11 @@ main > div:nth-of-type(2) {
     transform: scale(1.33);
 }
 
-.category .container > div:first-of-type:hover {
+.category .container > div:nth-of-type(5n+1):hover {
     transform: translateX(16.66%) scale(1.33);
     z-index: 999;
 }
-.category .container > div:first-of-type:hover ~ div {
+.category .container > div:nth-of-type(5n+1):hover ~ div {
     transform: translateX(33.33%);
 }
 
